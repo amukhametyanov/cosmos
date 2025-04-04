@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Solar System with UI</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; }
+        /* Ensure dat.GUI appears on top */
+        .dg.main { z-index: 100 !important; }
+    </style>
+</head>
+<body>
+    <canvas id="solar-system-canvas"></canvas>
+    <!-- Use CDN for Three.js -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <!-- Include dat.GUI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"></script>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
